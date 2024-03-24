@@ -8,16 +8,29 @@ section {
   border-radius: 6px;
   padding: 10px;
   margin: 10px 10px 10px 0;
-  display: flex;
+  /* inline places in a line passion and a message format */
+  /* display: inline; */
+  /* made section into a block level container instead of inline */
+  display: flex; 
+  /* display: flex = flex container */
+  /* direct child element becomes flex item "aside" */
+  /* how to clean up space between input pament info and input server info? */
+  /* call child element <aside> justify-content:space-between flex-basis:50% */
+/* padding 4px (left,right) 18px(up,down) */
 }
 
-aside {
+ aside {
+  /* browser distributes space between and around content items along the main axis */
   justify-content: space-between;
-  flex-basis: 50%;
+   flex-basis: 50%; 
+  /* flex-basis: 20%; */
+  /* flex-basis: 5%; */
   padding: 4px 18px;
-}
+} 
 
 input {
+  /* display can be either inline or block but can see the difference of the position of the input based on display layout */
+  /* display: inline; */
   display: block;
   margin: 10px 0 20px 0;
   border-radius: 5px;
@@ -36,6 +49,9 @@ button {
 }
 
 td {
+  /* text-align: inherit; */
+  /* text-align: end; */
+  /* text-align: start; */
   text-align: center;
   border: 1px solid grey;
 }
