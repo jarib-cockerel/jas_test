@@ -35,16 +35,19 @@ function submitPaymentInfo(evt) {
 // createCurPayment() will return undefined with negative or empty inputs
 // positive billAmt is required but tip can be 0
 function createCurPayment() {
-  let billAmt = billAmtInput.value;
+  let billAmt = billAmtInput.value; //return value from UI input
   let tipAmt = tipAmtInput.value;
 
-  console.log(billAmt);
-  console.log(tipAmt);
+  // console.log(billAmt);
+  // console.log(tipAmt);
 
   if (billAmt === "" || tipAmt === "") return;
 
   if (Number(billAmt) > 0 && Number(tipAmt) >= 0) {
     return {
+      // identifier (name, a number or a string literal) each value is an expression whose value is assigned to the property name
+      //object initializer (object literal)
+      //key:value
       billAmt: billAmt,
       tipAmt: tipAmt,
       tipPercent: calculateTipPercent(billAmt, tipAmt),
